@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* background: url(img/Land.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 100%; */
+}
+header::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    bottom: 0;
+    left: 0 ;
+    background: linear-gradient(to top, rgb(0, 0, 0, 1), rgba(0, 0, 0, 0) );
+}
+header .header-tittle{
+    margin: auto;
+    font-size: 50px;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 2px;
+    z-index: 99;
+}
+header .today-date{
+    font-size: 24px;
+    font-weight: 500;
+}
+header .today-date span{
+    font-size: 15px;
+}
+header .social-media{
+    display: flex;
+    list-style: none;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+}
+header .social-media li a{
+    transition: 0.5s;
+    color: white;
+}
+header .social-media li a:hover{
+    color: rgb(80, 137, 223);
+}
+nav,
+.header-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 34px;
+    position: relative;
+}
+nav .logo{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+nav .btn_about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    font-weight: 300;
+    height: 42px;
+    width: 85px;
+    border-radius: 50px;
+    transition: 0.5s;
+
+}
+
+nav .btn_about:hover{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+/* About Section */
+.about{
+    background-color: black;
+    width: 100%;
+    padding: 200px 0;
+}
+.about-container{
+    width: 75%;
+    margin: auto;
+}
+.image-gallery{
+    display: flex;
+    width: 100%;
+    min-height: 500px;
+    justify-content: space-between;
+    margin-bottom: 32px;    
+}
+.image-box{
+    width: 23%;
+    height: 400px;
+    position: relative;
+}
+.image-box img{
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: all 0.7s;
+}
+.image-box:nth-child(even){
+    transform: translateY(50px);
+}
+.image-box img:hover{
+    opacity: 0.5;
+    transform: translateY(-10px);
+}
+
+.about-info{
+    line-height: 24px;
+    font-size: 14px;
+    text-align: center;
+}
+/* Footer Section */
+
+footer{
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+}
+/* Responsive */
+@media only screen and (max-width:768px) {
+    .about-container{
+        width: 90%;
+    }
+    .header-bottom{
+        justify-content: center;
+    }
+    .today-date{
+        display: none;
+    }
+    .social-media{
+        width: 100%;
+    }
+    .image-gallery{
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+    .image-box{
+        width: 100%;
+        height: 400px;
+        margin: 10px 0;
+    }
+    .image-box:nth-child(even){
+        transform: translateY(0px);
+    }
+}
